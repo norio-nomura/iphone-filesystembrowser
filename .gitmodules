@@ -1,0 +1,3 @@
+[submodule "DataSources"]
+	path = DataSources
+	url = git://github.com/norio-nomura/iphone-tableviewdatasources.git
