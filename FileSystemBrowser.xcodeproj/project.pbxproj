@@ -323,12 +323,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Norio Nomura";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8AA9A4F-B3B7-4637-B9F4-8491DA2B34F6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E877C4F2-3403-44F1-9C49-CFEFFD510B4F";
 				SDKROOT = iphoneos2.2;
 			};
 			name = "Ad Hoc";
