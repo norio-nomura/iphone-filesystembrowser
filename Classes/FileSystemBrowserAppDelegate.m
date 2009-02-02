@@ -35,7 +35,7 @@
 		[navigationController pushViewController:viewController animated:YES];
 		[viewController release];
 	} else if ([[attributes objectForKey:NSFileType] isEqual:NSFileTypeRegular]) {
-		if ([path hasSuffix:@".plist"]) {
+		if ([path hasSuffix:@".plist"] || [path hasSuffix:@".strings"]) {
 			PropertyListViewController *viewController = [[PropertyListViewController alloc] initWithNibName:NSStringFromClass([PropertyListViewController class]) bundle:nil];
 			viewController.path = path;
 			[navigationController pushViewController:viewController animated:YES];

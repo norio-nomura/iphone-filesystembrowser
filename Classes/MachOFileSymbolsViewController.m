@@ -9,7 +9,6 @@
 
 
 NSArray* MachOFileSymbolsCreate(NSString* filename) {
-	NSLog(@"== Parse Symbols from %@",filename);
 	NSMutableArray *symbols = nil;
 	NSData *data = nil;
 	if (data = [[NSData alloc]initWithContentsOfMappedFile:filename]) {
@@ -27,7 +26,6 @@ NSArray* MachOFileSymbolsCreate(NSString* filename) {
 					for (uint32_t j = 0; j < symtab->nsyms; j++) {
 						NSString *symbol = [[NSString alloc]initWithCString:strings + nlist[j].n_un.n_strx encoding:NSNEXTSTEPStringEncoding];
 						if ([symbol length]) {
-							NSLog(@"n_type:%2x,n_desc:%2x,%@",(unsigned int)(nlist[j].n_type),(unsigned int)(nlist[j].n_desc),symbol);
 							[symbols addObject:symbol];
 						}
 						[symbol release];
